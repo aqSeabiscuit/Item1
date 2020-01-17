@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<script>
+    function a_add_b()
+    {
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = Number(a) + Number(b);
+        document.getElementById("c").innerHTML = c;
+        if(c>100)
+
+            document.getElementById("video1").src = "../content/333.mp4";
+        else 
+            document.getElementById("video1").src = "https://www.runoob.com/try/demo_source/movie.mp4";
+    }
+</script>
+    <div>
+        <br />
+        <video src="https://www.runoob.com/try/demo_source/movie.mp4" preload="auto" controls width="576" height="324" id="video1"></video>
+        <br/>
+        <select>
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+        </select>
+        <br/>
+            <input name="a"id="a"><br/>
+            <input name="b"id="b">
+            <button onclick="a_add_b()">计算</button>
+            <p id="c"></p><br />
+        <a href="/Home/Log_out">退出登录</a>
+       
+        
+    </div>
